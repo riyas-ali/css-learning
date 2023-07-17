@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+%html(lang="en")
+    %head
+        %meta(charset="UTF-8")/
+        %meta(name="viewport" content="width=device-width, initial-scale=1.0")/
+        %title Watch
+        %link(rel="stylesheet" href="styles.css")/
+        %link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200") /
+    %body 
+        .frame
+            .center
+                - (1..15).each do |i|
+                    %div{:class => "point-set-#{i}"}
+                        - (1..4).each do |j|
+                            %div{:class => "point-#{j}"}
+                %svg.spinner{:viewbox => "0 0 202 202", :xlmns => "https://www.w3.org/2000/svg"}
+                    %circle{:cx => "101", :cy => "101", :r => "99.5"}
+                .date Mon 15 Jan 2015
+                .time 11:42
+                .beat <span class="material-symbols-outlined">favorite</span>81
+                .energy 1248 kcal
